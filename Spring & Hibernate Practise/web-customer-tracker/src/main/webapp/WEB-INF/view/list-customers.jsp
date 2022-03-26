@@ -2,11 +2,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>List Customers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>List Customers</title>
+    <link href="${pageContext.request.contextPath}/res/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-Coming Soon...
+<div id="wrapper">
+    <div id="header">
+        <h2>CRM - Customer Relationship Manager</h2>
+    </div>
+</div>
+
+<div id="container">
+    <div id="content">
+
+        <input type="button" value="Add Customer" onclick="window.location.href='showFormForAdd'; return false;"
+               class="add-button"/>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <c:forEach var="tempCustomer" items="${customers}">
+
+                <c:url var="updateLink" value="/customer/showFormUpdate">
+                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                </c:url>
+
+                <c:url var="deleteLink" value="/customer/delete">
+                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                </c:url>
+
+                <tr>
+                    <td>${tempCustomer.id}</td>
+                    <td>${tempCustomer.firstName}</td>
+                    <td>${tempCustomer.lastName}</td>
+                    <td>${tempCustomer.email}</td>
+                    <td>
+                        <a href="${updateLink}">Update</a>
+                        |
+                        <a href="${deleteLink}" onclick="if (!(confirm('Are u sure want to delete?'))) return false">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+
+        </table>
+    </div>
+</div>
 </body>
 </html>

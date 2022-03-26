@@ -1,5 +1,0 @@
-#
-#Tue Mar 15 13:02:30 IST 2022
-com.example.webcustomertracker.testdb.TestDbServlet=javax.servlet.annotation.WebServlet
-com.example.webcustomertracker.controller.CustomerController=org.springframework.stereotype.Component
-com.example.webcustomertracker.HelloServlet=javax.servlet.annotation.WebServlet
