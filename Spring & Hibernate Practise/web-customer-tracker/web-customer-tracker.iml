@@ -77,5 +77,6 @@
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.3" level="project" />
+    <orderEntry type="library" name="aspectjweaver-1.9.8" level="project" />
   </component>
 </module>

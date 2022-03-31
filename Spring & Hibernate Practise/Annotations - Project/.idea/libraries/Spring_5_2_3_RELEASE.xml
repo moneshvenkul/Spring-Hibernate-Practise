@@ -19,6 +19,7 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-tx-5.2.3.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-core-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/aspectjweaver-1.9.8.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
